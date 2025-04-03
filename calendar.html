@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calendar</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="main-container">
+		<div class="calendar-container">
+			<h1>Book a Date</h1>
+			<nav class="nav">
+				<button id="prev">←</button>
+				<span id="curr"></span>
+				<button id="next">→</button>
+			</nav>
+			<table id="calendar">
+				<thead>
+					<tr>
+						<th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+					</tr>
+				</thead>
+				<tbody id="calendarBody"></tbody>
+			</table>
+		</div>
+		<div id="bookingModal" class="modal">
+			<div class="modal-content">
+				<h2></h2>
+				<span id="closeModal">×</span>
+				<label for="bookingReason">Reason:</label>
+				<input type="text" id="bookingReason" placeholder="Enter reason" required><br>
+				<label for="bookingTime">Time:</label>
+				<input type="time" id="bookingTime" required><br>
+				<button id="saveBooking" onclick="saveBooking()">Enter</button>
+			</div>
+		</div>
+		<div class="booking-container">
+			<h2>Bookings</h2>
+			<ul id="bookingList">
+	        </ul>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>
